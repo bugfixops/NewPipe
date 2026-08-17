@@ -422,5 +422,11 @@
         <meta-data
             android:name="com.samsung.android.multidisplay.keep_process_alive"
             android:value="true" />
+            <receiver android:name=".JacocoInstrument.SMSInstrumentedReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="edu.gatech.m3.emma.COLLECT_COVERAGE" />
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>
